@@ -6,5 +6,5 @@ class Project(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField()
     image_link =  models.TextField()
-    demo_link = models.Textfield()
+    demo_link = models.TextField()
     
