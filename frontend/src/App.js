@@ -1,25 +1,104 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+const todoItems = [
+  {
+    id: 1,
+    title: "Acebook",
+    description: "Facebook Clone",
+    completed: true,
+  },
+  {
+    id: 2,
+    title: "Chronicle",
+    description: "Read Algebra and History textbook for the upcoming test",
+    completed: false,
+  },
+  {
+    id: 3,
+    title: "Notes App",
+    description: "Go to library to return Sammy's books",
+    completed: true,
+  },
+  {
+    id: 4,
+    title: "MakersBNB",
+    description: "Write article on how to use Django with React",
+    completed: false,
+  },
+];
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todoList: todoItems,
+    };
+  }
+
+  displayCompleted = (status) => {
+    if (status) {
+      return this.setState({ viewCompleted: true });
+    }
+
+    return this.setState({ viewCompleted: false });
+  };
+
+  renderTabList = () => {
+    return (
+      <div>
+        <span
+          onClick={() => this.displayCompleted(true)}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          Complete
+        </span>
+        <span
+          onClick={() => this.displayCompleted(false)}
+        >
+          Incomplete
+        </span>
+      </div>
+    );
+  };
+
+  renderItems = () => {
+    // const { viewCompleted } = this.state;
+    const newItems = this.state.todoList.filter(
+      (item) => item
+    );
+
+    return newItems.map((item) => (
+      <li
+        key={item.id}
+      >
+        <span
+          className={`todo-title mr-2 ${
+            this.state.viewCompleted ? "completed-todo" : ""
+          }`}
+          title={item.description}
+        >
+          {item.title}
+        </span>
+      </li>
+    ));
+  };
+
+  render() {
+    return (
+      <main >
+        <h1 >Project List</h1>
+        <div >
+          <div >
+            <div >
+              {this.renderTabList()}
+              <ul>
+                {this.renderItems()}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
 }
 
 export default App;
