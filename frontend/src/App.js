@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const todoItems = [
+const projectItems = [
   {
     id: 1,
     title: "Acebook",
@@ -27,14 +27,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todoList: todoItems,
+      projectList: projectItems,
     };
   }
 
   renderItems = () => {
-    const newItems = this.state.todoList;
 
-    return newItems.map((item) => (
+    return this.state.projectList.map((item) => (
       <li
         key={item.id}
       >
