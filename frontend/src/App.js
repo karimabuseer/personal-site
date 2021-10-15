@@ -5,7 +5,6 @@ const todoItems = [
     id: 1,
     title: "Acebook",
     description: "Facebook Clone",
-    completed: true,
   },
   {
     id: 2,
@@ -43,25 +42,7 @@ class App extends Component {
     return this.setState({ viewCompleted: false });
   };
 
-  renderTabList = () => {
-    return (
-      <div>
-        <span
-          onClick={() => this.displayCompleted(true)}
-        >
-          Complete
-        </span>
-        <span
-          onClick={() => this.displayCompleted(false)}
-        >
-          Incomplete
-        </span>
-      </div>
-    );
-  };
-
   renderItems = () => {
-    // const { viewCompleted } = this.state;
     const newItems = this.state.todoList.filter(
       (item) => item
     );
@@ -89,7 +70,6 @@ class App extends Component {
         <div >
           <div >
             <div >
-              {this.renderTabList()}
               <ul>
                 {this.renderItems()}
               </ul>
