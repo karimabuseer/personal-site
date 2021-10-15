@@ -32,18 +32,13 @@ class App extends Component {
   }
 
   renderItems = () => {
-    const newItems = this.state.todoList.filter(
-      (item) => item
-    );
+    const newItems = this.state.todoList;
 
     return newItems.map((item) => (
       <li
         key={item.id}
       >
         <span
-          className={`todo-title mr-2 ${
-            this.state.viewCompleted ? "completed-todo" : ""
-          }`}
           title={item.description}
         >
           {item.title}
