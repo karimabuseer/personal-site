@@ -1,33 +1,12 @@
 import React, { Component } from "react";
+import axios from "axios";
 
-const projectItems = [
-  {
-    id: 1,
-    title: "Acebook",
-    description: "Facebook Clone",
-  },
-  {
-    id: 2,
-    title: "Chronicle",
-    description: "Read Algebra and History textbook for the upcoming test",
-  },
-  {
-    id: 3,
-    title: "Notes App",
-    description: "Go to library to return Sammy's books",
-  },
-  {
-    id: 4,
-    title: "MakersBNB",
-    description: "Write article on how to use Django with React",
-  },
-];
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectList: projectItems,
+      projectList: [],
     };
   }
 
