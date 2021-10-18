@@ -7,8 +7,19 @@ class App extends Component {
     super(props);
     this.state = {
       projectList: [],
+
     };
   }
+
+  componentDidMount() { 
+    this.refreshList();
+  }
+
+  refreshList = () => { 
+    axios.get("/api/projects")
+    .then((res) => this.setState( { projectList: res.data }))
+    .catch((err) => console.log(err))
+  };
 
   renderItems = () => {
 
