@@ -6,7 +6,7 @@ class Project(models.Model):
     title = models.CharField(max_length=120)
     order = models.IntegerField()
     short_description = models.CharField(max_length=240)
-    long_descrption = models.TextField()
+    long_description = models.TextField()
     image_one_link =  models.TextField()
     image_two_link = models.TextField()
     image_three_link = models.TextField()
