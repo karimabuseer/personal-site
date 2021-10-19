@@ -8,3 +8,6 @@ class ProjectView(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
     
+class BlogPostView(viewsets.ModelViewSet):
+    serializer_class = BlogPostSerializer
+    queryset = Project.objects.all()
