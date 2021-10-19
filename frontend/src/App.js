@@ -64,7 +64,7 @@ class App extends Component {
               renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/about">
-              <about />
+              <About />
             </Route>
             <Route path="/projects">
               <Projects state={this.state}/>
@@ -77,11 +77,6 @@ class App extends Component {
       </Router>
     );
   }
-
-    
-    About() {
-      return <h2>About</h2>;
-    }
 }
 
 export default App;
@@ -127,6 +122,10 @@ function renderItems (projectList) {
   ));
 };
 
+function About() {
+  return <h2>About</h2>;
+}
+
 
 
 // export default function App() {
@@ -165,10 +164,6 @@ function renderItems (projectList) {
 //   );
 // }
 
-
-// function About() {
-//   return <h2>About</h2>;
-// }
 
 // function Projects() {
 //   return (
