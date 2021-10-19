@@ -10,4 +10,4 @@ class ProjectView(viewsets.ModelViewSet):
     
 class BlogPostView(viewsets.ModelViewSet):
     serializer_class = BlogPostSerializer
-    queryset = Project.objects.all()
+    queryset = BlogPost.objects.all()
