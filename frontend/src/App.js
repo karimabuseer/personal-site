@@ -113,10 +113,9 @@ function renderItems (projectList) {
     <li
       key={item.id}
     >
-      <span
-        title={item.description}
-      >
+      <span>
         {item.title}
+        {item.short_description}
       </span>
     </li>
   ));
@@ -125,74 +124,3 @@ function renderItems (projectList) {
 function About() {
   return <h2>About</h2>;
 }
-
-
-
-// export default function App() {
-//   return (
-//     <Router>
-//       <div>
-//         <nav>
-//           <ul>
-//             <li>
-//               <Link to="/">Home</Link>
-//             </li>
-//             <li>
-//               <Link to="/about">About</Link>
-//             </li>
-//             <li>
-//               <Link to="/projects">Projects</Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         {/* A <Switch> looks through its children <Route>s and
-//             renders the first one that matches the current URL. */}
-//         <Switch>
-//           <Route path="/about">
-//             <About />
-//           </Route>
-//           <Route path="/projects">
-//             <Projects />
-//           </Route>
-//           <Route path="/">
-//             <Home />
-//           </Route>
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
-
-
-// function Projects() {
-//   return (
-//           <main >
-//             <h1 >Project List</h1>
-//             <div >
-//               <div >
-//                 <div >
-//                   <ul>
-//                     {renderItems()}
-//                   </ul>
-//                 </div>
-//               </div>
-//             </div>
-//           </main>
-//         );
-
-// function renderItems () {
-
-//   return this.state.projectList.map((item) => (
-//     <li
-//       key={item.id}
-//     >
-//       <span
-//         title={item.description}
-//       >
-//         {item.title}
-//       </span>
-//     </li>
-//   ));
-// };
-// }
