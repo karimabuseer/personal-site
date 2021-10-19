@@ -67,7 +67,7 @@ class App extends Component {
               <about />
             </Route>
             <Route path="/projects">
-              <projects />
+              <Projects state={this.state}/>
             </Route>
             <Route path="/">
               <home />
@@ -78,7 +78,7 @@ class App extends Component {
     );
   }
 
-  home() {
+  Home() {
       return (
         <div>
           <h2>Home</h2>
@@ -87,29 +87,30 @@ class App extends Component {
       );
     }
     
-    about() {
+    About() {
       return <h2>About</h2>;
-    }
-    
-    projects() {
-      return (
-        <main >
-          <h1 >Project List</h1>
-          <div >
-            <div >
-              <div >
-                <ul>
-                  {renderItems()}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </main>
-      );
     }
 }
 
 export default App;
+
+function Projects(props) {
+  console.log('we are in projects', props.state)
+  return (
+    <main >
+      <h1 >Project List</h1>
+      <div >
+        <div >
+          <div >
+            <ul>
+              {this.renderItems()}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
 
 // import React from "react";
 // import {
