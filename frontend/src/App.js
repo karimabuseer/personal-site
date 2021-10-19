@@ -78,14 +78,6 @@ class App extends Component {
     );
   }
 
-  Home() {
-      return (
-        <div>
-          <h2>Home</h2>
-          <text>Introductory text.</text>
-        </div>
-      );
-    }
     
     About() {
       return <h2>About</h2>;
@@ -116,7 +108,7 @@ function Home() {
   return (
     <div>
       <h2>Home</h2>
-      <text>Introductory text.</text>
+      <span>Introductory text.</span>
     </div>
   );
 }
