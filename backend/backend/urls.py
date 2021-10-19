@@ -20,6 +20,7 @@ from personal_site import views
 
 router = routers.DefaultRouter()
 router.register(r'projects', views.ProjectView, 'project')
+router.register(r'blogposts', views.BlogPostView, 'blogpost')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
