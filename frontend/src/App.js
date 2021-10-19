@@ -115,6 +115,7 @@ function renderItems (projectList) {
     >
       <span>
         {item.title}
+        {"\n"}
         {item.short_description}
       </span>
     </li>
