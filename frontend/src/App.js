@@ -70,7 +70,7 @@ class App extends Component {
               <Projects state={this.state}/>
             </Route>
             <Route path="/">
-              <home />
+              <Home />
             </Route>
           </Switch>
         </div>
@@ -112,6 +112,15 @@ function Projects(props) {
   );
 }
 
+function Home() {
+  return (
+    <div>
+      <h2>Home</h2>
+      <text>Introductory text.</text>
+    </div>
+  );
+}
+
 function renderItems (projectList) {
   return projectList.map((item) => (
     <li
@@ -126,13 +135,7 @@ function renderItems (projectList) {
   ));
 };
 
-// import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+
 
 // export default function App() {
 //   return (
@@ -170,14 +173,6 @@ function renderItems (projectList) {
 //   );
 // }
 
-// function Home() {
-//   return (
-//     <div>
-//       <h2>Home</h2>
-//       <text>Introductory text.</text>
-//     </div>
-//   );
-// }
 
 // function About() {
 //   return <h2>About</h2>;
