@@ -77,7 +77,7 @@ export default function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/projects">Projects</Link>
             </li>
           </ul>
         </nav>
@@ -88,8 +88,8 @@ export default function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/projects">
+            <Projects />
           </Route>
           <Route path="/">
             <Home />
@@ -113,6 +113,34 @@ function About() {
   return <h2>About</h2>;
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function Projects() {
+  return (
+          <main >
+            <h1 >Project List</h1>
+            <div >
+              <div >
+                <div >
+                  <ul>
+                    {renderItems()}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </main>
+        );
+
+function renderItems () {
+
+  return this.state.projectList.map((item) => (
+    <li
+      key={item.id}
+    >
+      <span
+        title={item.description}
+      >
+        {item.title}
+      </span>
+    </li>
+  ));
+};
 }
