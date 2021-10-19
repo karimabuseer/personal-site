@@ -103,7 +103,7 @@ function Projects(props) {
         <div >
           <div >
             <ul>
-              {this.renderItems()}
+              {renderItems(props.state.projectList)}
             </ul>
           </div>
         </div>
@@ -111,6 +111,20 @@ function Projects(props) {
     </main>
   );
 }
+
+function renderItems (projectList) {
+  return projectList.map((item) => (
+    <li
+      key={item.id}
+    >
+      <span
+        title={item.description}
+      >
+        {item.title}
+      </span>
+    </li>
+  ));
+};
 
 // import React from "react";
 // import {
