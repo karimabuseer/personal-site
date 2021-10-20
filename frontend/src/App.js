@@ -81,6 +81,9 @@ class App extends Component {
 
 export default App;
 
+const introText = "Former tech Operations and Business Development Manager, turned software engineer. A lifelong interest in technology has led me to pivot into software engineering. I'm deeply fascinated by how technology can be utilised to make life easier, and have moved away from tech strategy to have a more tangible impact within the industry. 
+I'm looking for a role which leverages the best modern industry practices. I'm excited by innovative teams with a strong culture, that focus on data-driven decisions, and that support their team member's skill-set development."
+
 function Projects(props) {
   console.log('we are in projects', props.state)
   return (
@@ -103,7 +106,7 @@ function Home() {
   return (
     <div>
       <h2>Home</h2>
-      <span>Introductory text.</span>
+      <span> {introText}</span>
     </div>
   );
 }
