@@ -47,15 +47,15 @@ class App extends Component {
     return (
       <Router>
         <div className='Main-pane'>
-          <nav className='Nav-bar'>
-            <ul>
+          <nav >
+            <ul className='Nav-bar'>
               <li className='Nav-items'>
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className='Nav-items'>
                 <Link to="/about">About</Link>
               </li>
-              <li>
+              <li className='Nav-items'>
                 <Link to="/projects">Projects</Link>
               </li>
             </ul>
