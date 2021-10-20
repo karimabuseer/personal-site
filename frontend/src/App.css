@@ -24,8 +24,32 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Main-pane {
+  background-color: #eaf2f5;
+  margin: 2rem;
+}
+
+a:link {
+  color: white
+}
+
+a:visited {
+  color: white
+}
+
+a:hover { 
+  color: hotpink
+}
+
+.Nav-bar{ 
+  background-color:rgb(26, 25, 24);
+  color: white;
+}
+
+.Nav-items {
+  padding: 2rem; 
+  display: inline;
+  float: left;
 }
 
 @keyframes App-logo-spin {

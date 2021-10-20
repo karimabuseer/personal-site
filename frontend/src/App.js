@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import './App.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,10 +46,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <nav>
+        <div className='Main-pane'>
+          <nav className='Nav-bar'>
             <ul>
-              <li>
+              <li className='Nav-items'>
                 <Link to="/">Home</Link>
               </li>
               <li>
