@@ -108,7 +108,7 @@ function Projects(props) {
 
 function Home() {
   return (
-    <div>
+    <div className="content-pane">
       <h2>Home</h2>
       <span> {introText}</span>
     </div>
